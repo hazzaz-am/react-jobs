@@ -16,16 +16,16 @@
     },
     {
       "id": "2",
-      "title": "Front-End Engineer (React & Redux)",
+      "title": "Front-End Engineer ",
       "type": "Full-Time",
-      "location": "Miami, FL",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
-      "salary": "$70K - $80K",
+      "location": "Miami, FL",
+      "salary": "$150K - $175K",
       "company": {
         "name": "Veneer Solutions",
         "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
         "contactEmail": "contact@loremipsum.com",
-        "contactPhone": "555-555-5555"
+        "contactPhone": "3687345234"
       }
     },
     {
@@ -85,20 +85,6 @@
       }
     },
     {
-      "id": "01ae",
-      "type": "Full-Time",
-      "title": "React Engineer",
-      "description": "You have to know all things about enginner.",
-      "salary": "Under $50K",
-      "location": "Dhaka",
-      "company": {
-        "name": "Company",
-        "description": "Nothing to say. We are nice and attractive",
-        "contactEmail": "hazzazab@gmail.com",
-        "contactPhone": "01771817"
-      }
-    },
-    {
       "id": "b493",
       "type": "Internship",
       "title": "Frontend Developer",
@@ -110,34 +96,6 @@
         "description": "A leading software company specializing in innovative web and mobile applications.",
         "contactEmail": "hr@techinnovations.com",
         "contactPhone": "123-456-7890"
-      }
-    },
-    {
-      "id": "ffb6",
-      "title": "Backend Engineer",
-      "type": "Remote",
-      "description": "Design, build, and maintain APIs using Node.js and Express. Ensure scalability and reliability of the backend systems.",
-      "location": "Remote",
-      "salary": "$90K - 100K",
-      "company": {
-        "name": "Code Solutions LLC",
-        "description": "An innovative IT firm focused on building scalable software solutions for businesses.",
-        "contactEmail": "jobs@codesolutions.com",
-        "contactPhone": "987-654-3210"
-      }
-    },
-    {
-      "id": "e55a",
-      "title": "UX/UI Designer",
-      "type": "Full-Time",
-      "description": "Create user-centered designs by understanding business requirements, and user feedback. Collaborate with developers to deliver polished interfaces.",
-      "location": "New York, NY",
-      "salary": "$50K - 60K",
-      "company": {
-        "name": "Creative Studio",
-        "description": "A design agency specializing in user experience and branding.",
-        "contactEmail": "design@creativestudio.com",
-        "contactPhone": "555-123-4567"
       }
     }
   ]

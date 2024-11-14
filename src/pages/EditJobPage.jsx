@@ -1,24 +1,27 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
-const AddJobPage = ({ addJob }) => {
+const EditJobPage = ({ updateJob }) => {
+	const editableJob = useLoaderData();
+	const { jobId } = useParams();
+
 	const navigate = useNavigate();
 
 	const [job, setJob] = useState({
-		title: "",
-		type: "Full-Time",
-		description: "",
-		location: "",
-		salary: "Under $50K",
+		title: editableJob.title,
+		type: editableJob.type,
+		description: editableJob.description,
+		location: editableJob.location,
+		salary: editableJob.salary,
 	});
 
 	const [company, setCompany] = useState({
-		name: "",
-		description: "",
-		contactEmail: "",
-		contactPhone: "",
+		name: editableJob.company.name,
+		description: editableJob.company.description,
+		contactEmail: editableJob.company.contactEmail,
+		contactPhone: editableJob.company.contactPhone,
 	});
 
 	const handleJobDetails = (event) => {
@@ -45,13 +48,14 @@ const AddJobPage = ({ addJob }) => {
 		event.preventDefault();
 
 		const jobDetails = {
+			id: jobId,
 			...job,
 			company,
 		};
 
-		addJob(jobDetails);
-		toast.success("Job Added Successfully");
-		navigate("/jobs");
+		updateJob(jobDetails);
+		toast.success("Job Updated Successfully");
+		navigate(`/jobs/${editableJob.id}`);
 	};
 
 	return (
@@ -59,7 +63,9 @@ const AddJobPage = ({ addJob }) => {
 			<div className="container m-auto max-w-2xl py-24">
 				<div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
 					<form onSubmit={submitForm}>
-						<h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
+						<h2 className="text-3xl text-center font-semibold mb-6">
+							Update Job
+						</h2>
 
 						<div className="mb-4">
 							<label
@@ -240,7 +246,7 @@ const AddJobPage = ({ addJob }) => {
 								className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
 								type="submit"
 							>
-								Add Job
+								Update Job
 							</button>
 						</div>
 					</form>
@@ -249,4 +255,4 @@ const AddJobPage = ({ addJob }) => {
 		</section>
 	);
 };
-export default AddJobPage;
+export default EditJobPage;
