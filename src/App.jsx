@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import JobsPage from "./pages/JobsPage";
 import AddJobPage from "./pages/AddJobPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import JobPage from "./pages/JobPage";
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
 			{
 				path: "/jobs",
 				element: <JobsPage />,
+			},
+			{
+				path: "/jobs/:jobId",
+				element: <JobPage />,
+				loader: async ({ params }) => await fetch(`/api/jobs/${params.jobId}`),
 			},
 			{
 				path: "/add-job",
